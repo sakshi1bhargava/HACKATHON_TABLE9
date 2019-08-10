@@ -24,7 +24,7 @@ public class MessageQueue {
     @Column(name = "qid")
 	private Integer qId;
 	
-	@Column(name="msg")
+	@Column(name="message")
 	private String msg;
 	
 	@Column(name="crte_time")
