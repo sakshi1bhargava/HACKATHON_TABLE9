@@ -1,4 +1,4 @@
-package com.dbs.queue.Configuration;
+package com.dbs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
