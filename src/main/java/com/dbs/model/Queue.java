@@ -66,9 +66,5 @@ public class Queue implements Serializable{
 		return "Queue["+qName+"] with ID "+qID;
 	}
 	
-	public Queue(Integer id,String qName){
-		this.qID = id;
-		this.qName = qName;
-	}
 	
 }
