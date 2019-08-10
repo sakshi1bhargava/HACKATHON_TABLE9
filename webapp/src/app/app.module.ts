@@ -8,11 +8,13 @@ import {MatTableModule, MatPaginatorModule, MatButtonModule,} from '@angular/mat
 import { CdkTableModule } from '@angular/cdk/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MessageComponent } from './message/message.component';
 CdkTableModule
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
