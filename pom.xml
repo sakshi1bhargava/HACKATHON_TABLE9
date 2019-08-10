@@ -8,8 +8,8 @@
 		<version>2.1.7.RELEASE</version>
 		
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>com.dbs</groupId>
+	<artifactId>queueChallenge</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
