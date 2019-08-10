@@ -11,7 +11,7 @@ import com.dbs.model.Queue;
 @Repository
 public interface DBSQueueRepository extends JpaRepository<Queue, Integer> {
 	
-	@Query(value="select m.count(*) from queues q ,qmessages m where m.qid = q.qid and q.qid = :id",nativeQuery = true)
+	@Query(value="select count(*) from queues q ,qmessages m where m.qid = q.qid and q.qid = :id",nativeQuery = true)
 	String getMsgCountInQueue(@Param("id") int id);
 	
 
