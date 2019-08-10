@@ -53,8 +53,13 @@ export class HomeComponent implements OnInit {
       data:{
         row:element
       }
+    }
+      deleteMessage(element){
+        data:{
+          row: element
+        }
+      }
   
-  }
   checkAvailability(element) {
 
   }
