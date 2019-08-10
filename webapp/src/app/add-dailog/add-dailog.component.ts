@@ -5,7 +5,6 @@ export interface Customer {
   Name:string;
   Order:string;
 }
-
 @Component({
   selector: 'app-add-dailog',
   templateUrl: './add-dailog.component.html',

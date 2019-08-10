@@ -55,7 +55,6 @@ export class HomeComponent implements OnInit {
       }
   
   }
-
   checkAvailability(element) {
 
   }
