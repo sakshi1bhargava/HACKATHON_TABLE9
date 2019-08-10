@@ -5,8 +5,10 @@ import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -14,8 +16,9 @@ import javax.persistence.Table;
 @NamedQuery(name="MessageQueue.findAll", query="select msg from MessageQueue msg")
 public class MessageQueue {
 	
-	@Id @GeneratedValue
-	@Column(name="msg_id")
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MSGQUEUE_SEQ")
+    @SequenceGenerator(sequenceName = "msgQueue_seq", allocationSize = 1, name = "MSGQUEUE_SEQ")
 	private Integer msgId;
 	
     @Column(name = "qid")
