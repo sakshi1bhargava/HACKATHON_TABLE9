@@ -46,6 +46,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
   addMessage(element) {
     const dialogRef = this.dialog.open(AddDailogComponent, {
