@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
+import {AddDailogComponent} from '../app/add-dailog/add-dailog.component';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 export interface PeriodicElement {
   count: string;
@@ -46,9 +48,13 @@ export class HomeComponent implements OnInit {
   }
 
   addMessage(element) {
-
+    const dialogRef = this.dialog.open(AddDailogComponent, {
+      width:'50%',
+      data:{
+        row:element
+      }
+  
   }
-
   checkAvailability(element) {
 
   }

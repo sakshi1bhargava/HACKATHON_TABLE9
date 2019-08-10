@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Create a Order!!</h1>
+<div mat-dialog-content>
+  <p>Hi Opened dialogue box</p>
+
+  <mat-label>
+      Name: 
+  </mat-label>
+  <mat-form-field>
+        <input matInput placeholder="Name" [(ngModel)]="customer.name"
+      />
+  </mat-form-field>
+<br>
+
+  <mat-label>
+    ID: 
+</mat-label>
+<mat-form-field>
+      <input matInput placeholder="ID" [(ngModel)]="customer.id"
+    />
+</mat-form-field>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button  >Submit</button>
+</div>
