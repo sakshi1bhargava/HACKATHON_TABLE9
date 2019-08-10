@@ -26,4 +26,7 @@ export class AddDailogComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
+  addQueue() {
+    
+  }
 }

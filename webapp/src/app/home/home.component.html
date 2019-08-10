@@ -1,19 +1,22 @@
+
+          <button mat-raised-button color="warn" (click)="addQueue()">Create Queue</button>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 full-width">
-  <button mat-raised-button (click)="openDialog()">Add Queue</button> 
+
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
-  <ng-container matColumnDef="queueName">
+  <ng-container matColumnDef="qName">
     <th mat-header-cell *matHeaderCellDef> Queue Name  </th>
     <td mat-cell *matCellDef="let element"> 
-      <a href="" (click)="showMessages(element)">{{element.queueName}}</a> </td>
+      <a (click)="showMessages(element)">{{element.qName}}</a> </td>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="count">
-    <th mat-header-cell *matHeaderCellDef> Messages Count </th>
-    <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+  <ng-container matColumnDef="qid">
+    <th mat-header-cell *matHeaderCellDef> Queue Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.qid}} </td>
   </ng-container>
 
   <!-- Weight Column -->
@@ -30,6 +33,13 @@
           <button mat-raised-button color="warn" (click)="checkAvailability(element)">Check</button>
       </td>
     </ng-container>
+
+    <ng-container matColumnDef="deleteBtn">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button mat-raised-button color="warn" (click)="deleteQueue(element)">Delete</button>
+        </td>
+      </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
