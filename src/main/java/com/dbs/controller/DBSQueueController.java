@@ -42,4 +42,15 @@ public class DBSQueueController {
 		DBSQueueRepository.deleteById(id);
 		return "{\"content\":\"Deleted successfully\"}";
 	}
+	
+	@GetMapping("/{id}")
+	public String isQueueFull(@PathVariable int id){
+		
+		String count = DBSQueueRepository.getMsgCountInQueue(id);
+		if(Integer.parseInt(count) > 10){
+			return "{\"status\":\"404\",\"content\":\"Queue is full\"}";
+		}else{
+			return "{\"status\":\"200\",\"content\":\"Message can be added\"}";
+		}
+	}
 }
