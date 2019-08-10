@@ -1,0 +1,46 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 full-width">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="queueName">
+    <th mat-header-cell *matHeaderCellDef> Queue Name  </th>
+    <td mat-cell *matCellDef="let element"> 
+      <a href="" (click)="showMessages(element)">{{element.queueName}}</a> </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="count">
+    <th mat-header-cell *matHeaderCellDef> Messages Count </th>
+    <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="addBtn">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element"> 
+        <button mat-raised-button color="primary" (click)="addMessage(element)">Add New</button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="checkBtn">
+      <th mat-header-cell *matHeaderCellDef> Avaliability </th>
+      <td mat-cell *matCellDef="let element"> 
+          <button mat-raised-button color="warn" (click)="checkAvailability(element)">Check</button>
+      </td>
+    </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
