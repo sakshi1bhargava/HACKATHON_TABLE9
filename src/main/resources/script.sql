@@ -5,7 +5,7 @@ create table qmessages(msg_id bigint(10) primary key, qid bigint(10), message va
 CREATE SEQUENCE queue_seq
   MINVALUE 1
   MAXVALUE 9999999999
-  START WITH 1
+  START WITH 2
   INCREMENT BY 1;
   
  CREATE SEQUENCE msgQueue_seq
