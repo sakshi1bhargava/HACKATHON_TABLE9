@@ -2,6 +2,7 @@ package com.dbs.controller;
 
 import java.util.List;
 
+import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -39,6 +40,6 @@ public class DBSQueueController {
 	public String deleteQueue(@PathVariable int id){
 	
 		DBSQueueRepository.deleteById(id);
-		return "Deleted successfully";
+		return "{\"content\":\"Deleted successfully\"}";
 	}
 }
