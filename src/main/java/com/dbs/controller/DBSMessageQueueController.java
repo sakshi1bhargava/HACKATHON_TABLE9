@@ -32,6 +32,7 @@ public class DBSMessageQueueController{
 		return messageRep.save(message);
 	}
 	
+	//Delete message using id
 	@DeleteMapping("/deleteMessage/{id}")
 	public String deleteMessage(@PathVariable("id")int id){
 		messageRep.deleteById(id);
